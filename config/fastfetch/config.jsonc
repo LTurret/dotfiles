@@ -1,0 +1,79 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "source": "$HOME/.config/fastfetch/logo",
+        "color": {
+            "1": "cyan",
+            "2": "blue",
+            "3": "red",
+            "4": "yellow"
+        },
+        "padding": {
+            "top": 2,
+            "left": 1,
+            "right": 2
+        }
+    },
+    "display": {
+        "separator": "   "
+    },
+    "modules": [
+        {
+            "type": "custom", // startofinfo
+            "format": "┌───────────────────────────────────────────┐"
+        },
+        {
+            "type": "custom", // start
+            "format": "   99期生 露崎まひる"
+        },
+        {
+            "type": "custom", // start
+            "format": "   夢咲く舞台に 輝け 私！"
+        },
+        {
+            "type": "custom", // middleofinfo
+            "format": "├───────────────────────────────────────────┤"
+        },
+        {
+            "type": "os",
+            "key": "   "
+        },
+        {
+            "type": "kernel",
+            "key": "   "
+        },
+        {
+            "type": "packages",
+            "key": "  󰊠 "
+        },
+        {
+            "type": "custom", // middleofinfo
+            "format": "├───────────────────────────────────────────┤"
+        },
+        {
+            "type": "cpu",
+            "key": "  󰍛 "
+        },
+        {
+            "type": "gpu",
+            "key": "  󰘚 "
+        },
+        {
+            "type": "memory",
+            "key": "  󰑭 "
+        },
+        {
+            "type": "disk",
+            "key": "   "
+        },
+        {
+            "type": "title",
+            "key": "   "
+        },
+        {
+            "type": "custom", // middleofinfo
+            "format": "└───────────────────────────────────────────┘"
+        }
+    ]
+}

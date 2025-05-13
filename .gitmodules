@@ -1,0 +1,12 @@
+[submodule "fonts/Cubic-11"]
+	path = fonts/Cubic-11
+	url = https://github.com/ACh-K/Cubic-11
+[submodule "fonts/JetBrainsMono"]
+	path = fonts/JetBrainsMono
+	url = https://github.com/JetBrains/JetBrainsMono
+[submodule "fonts/open-huninn-font"]
+	path = fonts/open-huninn-font
+	url = https://github.com/justfont/open-huninn-font
+[submodule "fonts/FiraCode"]
+	path = fonts/FiraCode
+	url = https://github.com/tonsky/FiraCode

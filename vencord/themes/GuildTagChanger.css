@@ -1,0 +1,21 @@
+/**
+ * @name GuildTagChanger
+ * @description Overwrite Discord guild tag content to your favovite.
+ * @author LTurret
+ * @version 1.0.0
+ */
+
+.unselectable__10651 {
+    color: transparent;
+    position: relative;
+}
+
+.unselectable__10651::before {
+    content: "白髮女人";
+    color: #393939;
+    font-size: 0.73rem;
+}
+
+.chipletContainerInner__10651 {
+    padding-right: 0.4rem;
+}

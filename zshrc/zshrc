@@ -1,0 +1,63 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+PROMPT="🐙 %~ $ "
+alias ls='lsd --color=auto'
+alias grep='grep --color=auto'
+
+# My custom configurations
+# Startup
+if [ -t 1 ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+    fastfetch
+fi
+history -p
+
+[ "$PWD" = '/mnt/c/Users/a0919/Documents/Arch' ] && cd
+[ "$PWD" = '/mnt/c/Users/a0919' ] && cd 
+
+# Environment Variables
+export PATH="$HOME/.cargo/bin:$PATH:$HOME/.local/bin"
+export DISPLAY=192.168.7.107:0.0
+export LIBGL_ALWAYS_INDIRECT=1
+
+# GPG
+GPG_TTY=$(tty)
+export GPG_TTY
+
+# Shortcuts
+clipboard() {
+  if [ -z "$1" ]; then
+    echo "Usage: cb <file_path>"
+    return 1
+  fi
+
+  cat "$1" >> clip.exe
+}
+
+gpc() {
+  g++ "$1" -O2 -std=c++23 -o main && ./main && rm main
+}
+
+alias cb=clipboard
+alias cf="clang-format --style Google --dump-config > .clang-format"
+alias ep="explorer.exe ."
+alias nv="nvim"
+alias py="python3 -B"
+alias gpp="g++ -O2 -std=c++23 -o main"
+alias win="cd /mnt/c/Users/a0919/Desktop/"
+alias venv="virtualenv venv"
+
+# Keybinds
+clear-buffer() {
+  clear
+  zle redisplay
+}
+zle -N clear-buffer
+
+bindkey "^[[3~"    delete-char
+bindkey "^[[F"     end-of-line
+bindkey "^[[H"     beginning-of-line
+bindkey "^L"       clear-buffer
+bindkey "^[[1;5C"  forward-word
+bindkey "^[[1;5D"  backward-word
+

@@ -1,0 +1,29 @@
+/**
+ * @name FontChanger
+ * @description Replaces Discord's Chinese fonts for message box.
+ * @author LTurret
+ * @version 1.1.0
+ */
+
+@font-face {
+    font-family: "PingFang TC";
+    src: url("https://raw.githubusercontent.com/LTurret/FontStorage/refs/heads/main/pingfangtc-regular.otf?token=GHSAT0AAAAAACOJQCBAVMPF2UQHLBCJB5BEZX7WKNQ")
+        format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "jf-openhuninn-2.1";
+    src: url("https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.messageContent_c19a55,
+.username_c19a55,
+.name__703b9,
+.header__13cf1,
+.unselectable__10651 {
+    font-family: "jf-openhuninn-2.1", sans-serif !important;
+}

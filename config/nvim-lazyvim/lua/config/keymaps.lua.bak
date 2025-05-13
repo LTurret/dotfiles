@@ -1,0 +1,35 @@
+vim.g.mapleader = " " -- space bar for leader key
+
+-- general
+vim.keymap.set("n", "<C-_>", function()
+	require("Comment.api").toggle.linewise.current()
+end)
+
+vim.keymap.set("v", "<C-_>", function()
+	local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+	vim.api.nvim_feedkeys(esc, "nx", false)
+	require("Comment.api").toggle.linewise(vim.fn.visualmode())
+end)
+
+-- Telescope
+vim.keymap.set("n", "<C-o>", ":Telescope find_files<cr>")
+vim.keymap.set("n", "<C-f>", ":Telescope live_grep<cr>")
+vim.keymap.set("n", "<leader>fp", ":Telescope git_files<cr>")
+vim.keymap.set("n", "<leader>fo", ":Telescope oldfiles<cr>")
+
+-- nvim-tree
+vim.keymap.set("n", "<C-b>", "<cmd>NvimTreeToggle<cr>")
+
+-- bufferline
+vim.keymap.set("n", "<Tab>", ":bn<cr>")
+vim.keymap.set("n", "<S-Tab>", ":bp<cr>")
+vim.keymap.set("n", "<leader>x", ":bd<cr>")
+vim.keymap.set("n", "<leader>1", ":BufferLineGoToBuffer 1<cr>")
+vim.keymap.set("n", "<leader>2", ":BufferLineGoToBuffer 2<cr>")
+vim.keymap.set("n", "<leader>3", ":BufferLineGoToBuffer 3<cr>")
+vim.keymap.set("n", "<leader>4", ":BufferLineGoToBuffer 4<cr>")
+vim.keymap.set("n", "<leader>5", ":BufferLineGoToBuffer 5<cr>")
+vim.keymap.set("n", "<leader>6", ":BufferLineGoToBuffer 6<cr>")
+vim.keymap.set("n", "<leader>7", ":BufferLineGoToBuffer 7<cr>")
+vim.keymap.set("n", "<leader>8", ":BufferLineGoToBuffer 8<cr>")
+vim.keymap.set("n", "<leader>9", ":BufferLineGoToBuffer 9<cr>")
